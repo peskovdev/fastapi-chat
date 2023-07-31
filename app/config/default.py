@@ -40,15 +40,6 @@ class DefaultSettings(BaseSettings):
         """
         Get uri for async connection with database.
         """
-        return "postgresql+asyncpg://{user}:{password}@{host}:{port}/{database}".format(
-            **self.database_settings,
-        )
-
-    @property
-    def database_uri_sync(self) -> str:
-        """
-        Get uri for connection with database.
-        """
         return "postgresql://{user}:{password}@{host}:{port}/{database}".format(
             **self.database_settings,
         )
