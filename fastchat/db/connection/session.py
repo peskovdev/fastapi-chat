@@ -2,7 +2,7 @@ from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine, async_sess
 # TODO: remove next line
 # from sqlalchemy.orm import sessionmaker
 
-from app.config import settings
+from fastchat.config import settings
 
 
 class SessionManager:

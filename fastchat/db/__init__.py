@@ -2,9 +2,9 @@ from sqlalchemy import MetaData
 
 
 convention = {
-    "all_column_names": str(lambda constraint, table: "_".join(
+    "all_column_names": lambda constraint, table: "_".join(
         [str(column.name) for column in constraint.columns.values()]
-    )),
+    ),
     "ix": "ix__%(table_name)s__%(all_column_names)s",
     "uq": "uq__%(table_name)s__%(all_column_names)s",
     "ck": "ck__%(table_name)s__%(constraint_name)s",

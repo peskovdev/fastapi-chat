@@ -16,11 +16,11 @@ class DefaultSettings(BaseSettings):
 
     LOG_FILE: str = environ.get("LOG_FILE", "operations.log")
 
-    POSTGRES_DB: str = environ.get("POSTGRES_DB", "balance")
-    POSTGRES_HOST: str = environ.get("POSTGRES_HOST", "database")
-    POSTGRES_USER: str = environ.get("POSTGRES_USER", "student")
+    POSTGRES_DB: str = environ.get("POSTGRES_DB", "chat")
+    POSTGRES_HOST: str = environ.get("POSTGRES_HOST", "localhost")
+    POSTGRES_USER: str = environ.get("POSTGRES_USER", "postgres")
     POSTGRES_PORT: int = int(environ.get("POSTGRES_PORT", 5432))
-    POSTGRES_PASSWORD: str = environ.get("POSTGRES_PASSWORD", "")
+    POSTGRES_PASSWORD: str = environ.get("POSTGRES_PASSWORD", "changeme")
 
     @property
     def database_settings(self) -> dict:
@@ -40,7 +40,7 @@ class DefaultSettings(BaseSettings):
         """
         Get uri for async connection with database.
         """
-        return "postgresql://{user}:{password}@{host}:{port}/{database}".format(
+        return "postgresql+psycopg://{user}:{password}@{host}:{port}/{database}".format(
             **self.database_settings,
         )
 

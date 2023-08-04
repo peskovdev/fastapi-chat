@@ -1,8 +1,8 @@
 from fastapi import FastAPI
 from uvicorn import run
 
-from app.config import settings
-from app.endpoints import list_of_routes
+from fastchat.config import settings
+from fastchat.endpoints import list_of_routes
 
 
 def bind_routes(application: FastAPI) -> None:

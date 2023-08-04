@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 from starlette import status
 
-from app.schemas import PingResponse
+from fastchat.schemas import PingResponse
 
 
 router = APIRouter(
