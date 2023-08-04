@@ -34,7 +34,7 @@ app = get_app()
 
 if __name__ == "__main__":
     run(
-        "app.__main__:app",
+        "fastchat.__main__:app",
         host=settings.APP_HOST,
         port=settings.APP_PORT,
         reload=True,
