@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "fastchat"
+name = "app"
 version = "0.1.0"
 description = ""
 authors = ["Peskov Sergey <peskovdev@proton.me>"]
@@ -38,7 +38,7 @@ plugins = ["sqlalchemy.ext.mypy.plugin"]
 line-length = 100
 
 [tool.isort]
-known_local_folder = "fastchat"
+known_local_folder = "app"
 lines_after_imports = 2
 multi_line_output = 3
 line_length = 100

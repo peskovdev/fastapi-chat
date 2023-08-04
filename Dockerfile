@@ -17,4 +17,6 @@ RUN poetry config virtualenvs.create false \
 
 COPY . /code/
 
+RUN poetry install --only main
+
 ENTRYPOINT ["/code/boot.sh"]

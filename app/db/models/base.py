@@ -4,7 +4,7 @@ from sqlalchemy.dialects.postgresql import TIMESTAMP, UUID
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 from sqlalchemy.sql import func
 
-from fastchat.db import metadata as meta
+from app.db import metadata as meta
 
 
 class BaseTable(DeclarativeBase):

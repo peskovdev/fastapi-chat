@@ -22,7 +22,7 @@ else
 MESSAGE = "Done"
 endif
 
-APPLICATION_NAME = fastchat
+APPLICATION_NAME = app
 TEST = poetry run python3 -m pytest --verbosity=2 --showlocals --log-level=DEBUG
 CODE = $(APPLICATION_NAME) tests
 DOCKER_RUN = docker run -p 8000:8000 -it --env-file .env $(APPLICATION_NAME)

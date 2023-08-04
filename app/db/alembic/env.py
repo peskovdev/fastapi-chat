@@ -4,9 +4,9 @@ from alembic import context
 from dotenv import load_dotenv
 from sqlalchemy import engine_from_config, pool
 
-from fastchat.config import settings
-from fastchat.db.models.base import BaseTable
-from fastchat.db.models import *  # noqa
+from app.config import settings
+from app.db.models.base import BaseTable
+from app.db.models import *  # noqa
 
 
 # this is the Alembic Config object, which provides

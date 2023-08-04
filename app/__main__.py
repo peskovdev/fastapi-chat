@@ -1,8 +1,8 @@
 from fastapi import FastAPI
 from uvicorn import run
 
-from fastchat.config import settings
-from fastchat.endpoints import list_of_routes
+from app.config import settings
+from app.endpoints import list_of_routes
 
 
 def bind_routes(application: FastAPI) -> None:
@@ -34,7 +34,7 @@ app = get_app()
 
 if __name__ == "__main__":
     run(
-        "fastchat.__main__:app",
+        "app.__main__:app",
         host=settings.APP_HOST,
         port=settings.APP_PORT,
         reload=True,
